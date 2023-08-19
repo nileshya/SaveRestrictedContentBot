@@ -9,7 +9,7 @@ services:
       AUTH: $AUTH
       FORCESUB: $FORCESUB
     ports:
-      - 8080
+      - 10000
     resources:
       cpu: 1000m
       memory: 3Gi
