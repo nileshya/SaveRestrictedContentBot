@@ -6,4 +6,4 @@ RUN apt -qq update && apt -qq install -y git python3 python3-pip ffmpeg
 COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","bash.sh"]
-RUN pip3 install --upgrade pip
+RUN opt/render/project/src/.venv/bin/python -m pip install --upgrade pip
