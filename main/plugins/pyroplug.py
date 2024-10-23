@@ -41,6 +41,12 @@ async def get_msg(userbot, client, bot, sender, edit_id, msg_link, i):
         file = ""
         try:
             msg = await userbot.get_messages(chat, msg_id)
+                if 't.me/c/' in msg_link: #...
+    else:  
+        edit = await client.edit_message_text(sender, edit_id, "Cloning.")  
+        chat = msg_link.split("/")[-2]  
+        # <add to here>  <<<
+        try: # ...  
             if msg.media:
                 if msg.media==MessageMediaType.WEB_PAGE:
                     edit = await client.edit_message_text(sender, edit_id, "Cloning.")
